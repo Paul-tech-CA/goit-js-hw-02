@@ -2,17 +2,15 @@
 
 // var lowerCaseItems = $.map(items, String.toLowerCase);
 const checkForSpam = function (message, word) {
-  message = message.toLowerCase;
+  // message = message.toLowerCase;
   //  isInMessage = message.toLoverCase();
 
   const isInMessage = message.includes(word);
 
-  console.log(isInMessage);
+  // console.log(isInMessage);
 
   return isInMessage;
 };
-
-
 
 console.log(checkForSpam('Latest technology news', 'sale', 'spam')); // false
 

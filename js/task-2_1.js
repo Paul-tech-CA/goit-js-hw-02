@@ -4,7 +4,6 @@ const logItems = function (array) {
   for (const arr of array) {
     const idx = array.indexOf(arr);
     console.log(`${idx + 1} -  ${arr}`);
-    
   }
 };
 

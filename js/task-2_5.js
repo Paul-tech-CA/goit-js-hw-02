@@ -1,42 +1,23 @@
-let countries = prompt('Укажите страну доставки');
-let normalizedCountries = countries.toLowerCase();
-console.log(normalizedCountries);
+'use strict';
 
-let price;
+// var lowerCaseItems = $.map(items, String.toLowerCase);
+const checkForSpam = function (message, word) {
+  message = message.toLowerCase;
+  //  isInMessage = message.toLoverCase();
 
-switch (normalizedCountries) {
-  case 'китай': {
-    price = '100';
-    normalizedCountries = 'Китай';
-    break;
-  }
+  const isInMessage = message.includes(word);
 
-  case 'чили': {
-    normalizedCountries = 'Чили';
-    price = '250';
-    break;
-  }
+  console.log(isInMessage);
 
-  case 'австралия': {
-    normalizedCountries = 'Австралию';
-    price = '170';
-    break;
-  }
+  return isInMessage;
+};
 
-  case 'индия': {
-    normalizedCountries = 'Индию';
-    price = '80';
-    break;
-  }
 
-  case 'ямайка': {
-    normalizedCountries = 'Ямайку';
-    price = '120';
-    break;
-  }
 
-  default:
-    alert('В вашей стране доставка не доступна');
-}
-price ? console.log(
-  `Доставка в ${normalizedCountries} будет стоить ${price} кредитов`): '';
+console.log(checkForSpam('Latest technology news', 'sale', 'spam')); // false
+
+console.log(checkForSpam('JavaScript weekly newsletter', 'sale', 'spam')); // false
+
+console.log(checkForSpam('Get best sale offers now!', 'sale', 'spam')); // true
+
+console.log(checkForSpam('[SPAM] How to earn fast money?', 'sale', 'spam')); // true

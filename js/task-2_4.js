@@ -1,4 +1,4 @@
-'use srict';
+'use strict';
 let stringFormated;
 
 const formatString = function (string) {

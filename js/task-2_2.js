@@ -1,4 +1,4 @@
-'use srict';
+'use strict';
 let totalPrice = 0;
 
 const calculateEngravingPrice = function (message, pricePerWord) {

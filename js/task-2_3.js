@@ -1,4 +1,4 @@
-'use srict';
+'use strict';
 let biggestWord;
 
 const findLongestWord = function (string) {

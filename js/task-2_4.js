@@ -1,25 +1,26 @@
-let credits = 23580;
-const pricePerDroid = 3000;
-let totalPrice;
-let userInput = prompt('Какое количество дроидов Вы хотите купить?');
-userInput = Number(userInput);
-console.log(userInput);
+'use srict';
+let stringFormated;
 
-if (!userInput) {
-  console.log('Отменено пользователем!');
-} else {
-  totalPrice = userInput * pricePerDroid;
-  console.log(totalPrice);
-  if (totalPrice > credits) {
-    console.log('Недостаточно средств на счету!');
-    alert('Недостаточно средств на счету!');
-  } else {
-    credits -= totalPrice;
-    console.log(
-      `Вы купили ${userInput} дроидов, на счету осталось ${credits} кредитов.`,
-    );
-    alert(
-      `Вы купили ${userInput} дроидов, на счету осталось ${credits} кредитов.`,
-    );
-  }
-}
+const formatString = function (string) {
+  stringFormated = string.split('');
+
+  string.length <= 40 ? string : (string = ` ${string.slice(0, 40)} ...`);
+
+  return string;
+};
+
+console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+// вернется оригинальная строка
+
+console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+// вернется форматированная строка
+
+console.log(formatString('Curabitur ligula sapien.'));
+// вернется оригинальная строка
+
+console.log(
+  formatString(
+    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+  ),
+);
+// вернется форматированная строка

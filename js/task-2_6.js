@@ -4,8 +4,8 @@ const numbers = [];
 let total = 0;
 let input;
 
-while (!input) {
-  let input = prompt('Введите число');
+while (true) {
+  input = prompt('Введите число');
 
   input = Number(input);
 
